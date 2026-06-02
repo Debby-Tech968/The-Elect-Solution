@@ -2,10 +2,10 @@ import React from 'react'
 import imagecontainer from "../assets/Container2.png";
 import burrimage from "../assets/Burr.png";
 import Card from './Card';
-import imageair from "../assets/iconair.png";
-import background1 from "../assets/background1.png";
-import background2 from "../assets/background2.png";
-import background3 from "../assets/background3.png";
+import imageair from "../assets/Iconair.png";
+import background1 from "../assets/Background1.png";
+import background2 from "../assets/Background2.png";
+import background3 from "../assets/Background3.png";
 import Btn from './Btn';
 import Footer from './Footer';
 
