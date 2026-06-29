@@ -11,7 +11,7 @@ const Contact = () => {
     <div className="bg-[#004182] h-200 lg:pt-20">
       <div className="relative">
         {/* Hero Section */}
-        <div className="relative h-[450px] sm:h-[550px] md:h-[650px] lg:h-[720px]">
+        <div className="relative h-112.5 sm:h-137.5 md:h-162.5 lg:h-180">
           <img
             src={image}
             alt="contact"

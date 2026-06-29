@@ -71,7 +71,7 @@ const LocationMap = ({ className = "" }) => {
 
   if (!position) {
     return (
-      <div className="w-full h-[280px] sm:h-[350px] md:h-[450px] lg:h-[520px] xl:h-[600px] flex items-center justify-center bg-gray-100 rounded-xl">
+      <div className="w-full h-70 sm:h-87.5 md:h-112.5 lg:h-130 xl:h-150 flex items-center justify-center bg-gray-100 rounded-xl">
         <p className="text-gray-500 text-sm md:text-base animate-pulse">
           Fetching your location...
         </p>
@@ -81,7 +81,7 @@ const LocationMap = ({ className = "" }) => {
 
   return (
     <div className={`w-full rounded-xl overflow-hidden shadow-lg ${className}`}>
-      <div className="h-[280px] p-5 mb-20  sm:h-[350px] md:h-[450px] lg:h-[520px] xl:h-[600px] 2xl:h-[700px]">
+      <div className="h-70 p-5 mb-20  sm:h-87.5 md:h-112.5 lg:h-130 xl:h-150 2xl:h-175">
         <MapContainer
           center={position}
           zoom={16}
