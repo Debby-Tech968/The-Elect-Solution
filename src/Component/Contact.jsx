@@ -8,34 +8,43 @@ import Footer from "./Footer";
 
 const Contact = () => {
   return (
-    <div className="bg-[#004182] h-120">
+    <div className="bg-[#004182] h-200 lg:pt-20">
       <div className="relative">
-        <img
-          src={image}
-          alt="contact"
-          className="w-full h-125 lg:h-auto object-cover"
-        />
-        <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-20">
-          <div className="bg-[#FF8928] text-black text-xs lg:text-sm font-bold px-4 py-2 mt-10 rounded-full w-fit">
-            CONNECT WITH EXCELLENCE
+        {/* Hero Section */}
+        <div className="relative h-[450px] sm:h-[550px] md:h-[650px] lg:h-[720px]">
+          <img
+            src={image}
+            alt="contact"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          {/* Optional dark overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
+
+          {/* Hero Text */}
+          <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-10 xl:px-16 lg:px-5 z-10">
+            <div className="bg-[#FF8928] text-black text-xs md:text-sm font-bold px-4 py-2 rounded-full w-fit">
+              CONNECT WITH EXCELLENCE
+            </div>
+
+            <h1 className="mt-6 text-4xl md:text-5xl lg:text-7xl font-semibold text-white leading-tight">
+              Let's build your{" "}
+              <span className="text-[#FF8928]">
+                digital <br />
+                future
+              </span>
+            </h1>
+
+            <p className="mt-6 text-sm md:text-base lg:text-lg text-[#D6E3FF] max-w-2xl">
+              Our structural approach to digital engineering ensures your vision
+              is translated into high-performance reality. Reach out today to
+              start your architectural journey.
+            </p>
           </div>
-
-          <h1 className="mt-6 text-4xl md:text-5xl lg:text-[72px] font-semibold text-white leading-tight">
-            Let's build your{" "}
-            <span className="text-[#FF8928]">
-              digital <br />
-              future
-            </span>
-          </h1>
-
-          <p className="mt-6 text-sm md:text-base lg:text-lg text-[#D6E3FF] max-w-2xl">
-            Our structural approach to digital engineering ensures your vision
-            is translated into high-performance reality. Reach out today to
-            start your architectural journey.
-          </p>
         </div>
 
-        <div className="absolute left-0 right-0 top-110 px-6 lg:px-20">
+        {/* Contact Card */}
+        <div className="relative z-20 px-6 xl:px-16 lg:px-5 -mt-20 lg:-mt-28">
           <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
             {/* Contact Card */}
             <div className="bg-[#002B5A] text-white p-6 lg:p-12 rounded-lg w-full lg:w-112.5 min-h-125">
@@ -188,11 +197,11 @@ const Contact = () => {
         </div>
       </div>
 
-      <section className="w-full lg:mt-200 mt-350">
-        <Locationmap className="h-137 rounded-none shadow-none" />
+      <section className="w-full mt-12">
+        <Locationmap className="rounded-none shadow-none" />
       </section>
 
-        <Footer className="lg:mt-20 mt-10" />
+      <Footer className="" />
     </div>
   );
 };

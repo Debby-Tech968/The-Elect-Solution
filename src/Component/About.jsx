@@ -22,7 +22,7 @@ const About = () => {
 
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/50 flex items-center">
-          <div className="px-6 lg:px-20 w-full max-w-5xl">
+          <div className="px-6 xl:px-16 lg:px-5 w-full max-w-5xl">
             {/* TAG */}
             <h2 className="text-xs md:text-sm font-bold bg-[#FFDCC6] text-black w-fit px-3 py-1 rounded">
               ENGINEERING EXCELLENCE
@@ -43,7 +43,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="px-6 py-16 lg:px-20 flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
+      <div className="px-6 py-16 xl:px-16 lg:px-5 flex flex-col lg:flex-row gap-25 lg:gap-20 items-center">
         {/* IMAGE */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
@@ -78,9 +78,9 @@ const About = () => {
       </div>
       
       
-      <div className="bg-[#F3F3F9] w-full py-16 px-6 lg:px-20">
+      <div className="bg-[#F3F3F9] w-full py-16 px-6  lg:px-5 xl:px-16">
         {/* MISSION / VISION */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
           {/* MISSION CARD */}
           <div className="bg-white p-8 rounded-3xl shadow-lg hover:scale-105 transition">
             <img src={imageair} alt="mission" className="w-10 mb-4" />
@@ -140,7 +140,7 @@ const About = () => {
       
 
 
-      <div className="px-6 py-16 lg:px-20">
+      <div className="px-6 py-16 xl:px-16 lg:px-5">
         {/* HEADING */}
         <div className="text-center mb-14">
           <h2 className="text-[#964900] font-semibold tracking-widest text-xs md:text-sm">
@@ -153,7 +153,7 @@ const About = () => {
         </div>
 
         {/* TEAM GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* CARD 1 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <img
@@ -230,9 +230,9 @@ const About = () => {
       
 
 
-      <div className="bg-[#F3F3F9] w-full py-16 px-6 lg:px-20">
+      <div className="bg-[#F3F3F9] w-full py-16 px-6 lg:px-5 xl:px-16">
         {/* MISSION / VISION */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {/* MISSION CARD */}
           <div className="bg-white p-8 rounded-3xl shadow-lg hover:scale-105 transition">
             <img src={imageair} alt="mission" className="w-10 mb-4" />
@@ -289,7 +289,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

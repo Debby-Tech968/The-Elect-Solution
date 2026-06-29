@@ -6,8 +6,8 @@ const Portfolio = () => {
   return (
     <div className="w-full bg-[#F3F3F9]">
       {/* HERO */}
-      <div className="px-6 lg:px-20 pt-28 pb-16">
-        <h2 className="text-xs font-bold bg-[#FFDCC6] text-black w-fit px-3 py-1 rounded">
+      <div className="px-6 xl:px-16 lg:px-5 pt-28 pb-16">
+        <h2 className="text-xs lg:mt-8  font-bold bg-[#FFDCC6] text-black w-fit px-3 py-1 rounded">
           OUR PORTFOLIO
         </h2>
 
@@ -22,7 +22,7 @@ const Portfolio = () => {
       </div>
 
       {/* PROJECT GRID */}
-      <div className="px-6 lg:px-20 pb-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="px-6 xl:px-16 lg:px-5 pb-20 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Project 1 */}
         <div className="bg-white rounded-2xl shadow-md p-8 hover:scale-105 transition">
           <h2 className="text-xl font-bold text-[#002B5A]">
@@ -113,7 +113,7 @@ const Portfolio = () => {
       </div>
 
       {/* CTA */}
-      <div className="px-6 lg:px-20 pb-20">
+      <div className="px-6 xl:px-16 lg:px-5 pb-20">
         <div className="bg-[#002B5A] text-white rounded-3xl p-10 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div>
             <h1 className="text-3xl font-bold">Want a project like this?</h1>

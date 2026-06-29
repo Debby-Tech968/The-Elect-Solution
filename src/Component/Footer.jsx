@@ -5,7 +5,7 @@ import whatsappIcon from "../assets/whatsapp.png";
 const Footer = ({ className = "" }) => {
   return (
     <footer
-      className={`bg-[#002B5A] text-white px-6 lg:px-20 py-20 ${className}`}
+      className={`bg-[#002B5A] text-white px-6 xl:px-16 lg:px-5 py-20 ${className}`}
     >
       {/* TOP SECTION */}
       <div className="flex flex-col lg:flex-row justify-between gap-16">

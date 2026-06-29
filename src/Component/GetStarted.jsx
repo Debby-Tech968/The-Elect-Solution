@@ -6,8 +6,8 @@ const GetStarted = () => {
   return (
     <div className="w-full bg-[#F3F3F9]">
       {/* HERO SECTION */}
-      <div className="px-6 lg:px-20 pt-28 pb-10">
-        <h2 className="text-xs font-bold bg-[#FFDCC6] text-black w-fit px-3 py-1 rounded">
+      <div className="px-6 xl:px-16 lg:px-5 pt-28 pb-10">
+        <h2 className="text-xs lg:mt-10 font-bold bg-[#FFDCC6] text-black w-fit px-3 py-1 rounded">
           GET STARTED
         </h2>
 
@@ -22,7 +22,7 @@ const GetStarted = () => {
       </div>
 
       {/* FORM SECTION */}
-      <div className="px-6 lg:px-20 pb-20">
+      <div className="px-6 xl:px-16 lg:px-5 pb-20">
         <div className="bg-white rounded-2xl shadow-md p-10 max-w-4xl mx-auto">
           <form
             action="https://formspree.io/f/xgoqlgvl"
@@ -102,7 +102,7 @@ const GetStarted = () => {
       </div>
 
       {/* TRUST SECTION */}
-      <div className="px-6 lg:px-20 pb-20">
+      <div className="px-6 xl:px-16 lg:px-5 pb-20">
         <div className="grid md:grid-cols-3 gap-6 text-center">
           <div className="bg-white p-6 rounded-xl shadow-md hover:scale-105 transition">
             <h2 className="font-bold text-[#002B5A]">Fast Response</h2>

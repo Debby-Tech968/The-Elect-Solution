@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <div className="w-full">
       {/* ================= HERO SECTION ================= */}
-      <div className="w-full min-h-screen bg-[#F3F3F9] pt-28 px-6 lg:px-20 flex items-center">
+      <div className="w-full min-h-screen bg-[#F3F3F9] pt-28 px-6 xl:px-16 lg:px-5 flex items-center">
         <div className="max-w-4xl">
           <h2 className="text-[12px] font-bold bg-[#FFDCC6] text-black w-fit px-3 py-1 rounded">
             ENGINEERING EXCELLENCE
@@ -31,9 +31,9 @@ const Services = () => {
       </div>
 
       {/* ================= SERVICE SECTION ================= */}
-      <div className="bg-white py-20 px-6 lg:px-20">
+      <div className="bg-white py-20 px-6 xl:px-16 lg:px-5">
         {/* WRAPPER */}
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
           {/* CARD 1 */}
           <div
             className="flex-2 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-lg rounded-2xl p-10 bg-white hover:scale-105
@@ -94,7 +94,7 @@ const Services = () => {
           </div>
 
           {/* CARD 2 */}
-          <div className="flex-1 bg-[#F3F3F9] h-86 rounded-2xl p-10 flex flex-col justify-between shadow-md hover:scale-105 transition-all duration-300">
+          <div className="flex-1 bg-[#F3F3F9] lg:mt-20 xl:mt-0 h-86 rounded-2xl p-10 flex flex-col justify-between shadow-md hover:scale-105 transition-all duration-300">
             <div>
               <img src={imageicon} alt="" className="w-12 mb-6" />
 
@@ -117,7 +117,7 @@ const Services = () => {
 
       {/* ================= CARD 3 SECTION ================= */}
 
-      <div className="py-20 px-6 lg:px-20">
+      <div className="py-20 px-6 xl:px-16 lg:px-5">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
           {/* ========= LEFT CARD ========= */}
           <div
@@ -159,6 +159,8 @@ const Services = () => {
           <div
             className="
         flex-[1.5]
+        lg:h-100
+        xl:h-80
         h-80
         bg-white
         rounded-3xl
@@ -261,7 +263,7 @@ const Services = () => {
         </div>
 
         {/* ================= Card 2 ================= */}
-        <div className="flex-1 bg-[#F3F3F9] p-8 rounded-2xl shadow-md border-l-4 border-[#0A7A3D] hover:scale-105 transition-all duration-300">
+        <div className="flex-1 bg-[#F3F3F9] p-8  rounded-2xl shadow-md border-l-4 border-[#0A7A3D] hover:scale-105 transition-all duration-300">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-xl font-semibold text-[#0A7A3D]">
               Electrical Installation
@@ -278,7 +280,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="px-6 lg:px-20 py-12">
+      <div className="px-6 xl:px-16 lg:px-5 py-12">
         <div className="bg-[#002B5A] max-w-7xl mx-auto rounded-3xl px-6 py-10 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-center justify-between gap-10 text-white shadow-xl hover:-translate-y-2 transition-all duration-300">
           {/* Text Content */}
           <div className="text-center lg:text-left">
@@ -293,21 +295,21 @@ const Services = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+          <div className="flex flex-col md:items-center md:justify-center sm:flex-row gap-4 w-full xl:w-auto">
             <Btn
               text="Get a consultant"
-              className="bg-[#FF8928] text-black px-8 py-4 rounded-lg text-center hover:scale-105 transition-all duration-300"
+              className="bg-[#FF8928] flex justify-center text-black px-8 py-4 rounded-lg text-center hover:scale-105 transition-all duration-300"
             />
 
             <Btn
               text="Contact Us"
-              className="bg-[#004182] text-white px-8 py-4 rounded-lg border border-[#004182] text-center hover:scale-105 transition-all duration-300"
+              className="bg-[#004182] flex justify-center text-white px-8 py-4 rounded-lg border border-[#004182] text-center hover:scale-105 transition-all duration-300"
             />
           </div>
         </div>
       </div>
 
-      <Footer className="mt-20" />
+      <Footer className="mt-0 lg:mt-10" />
     </div>
   );
 };

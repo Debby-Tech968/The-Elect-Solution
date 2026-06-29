@@ -6,7 +6,6 @@ import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
-/* Fix Leaflet default icons */
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
@@ -15,7 +14,6 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-/* 📍 Fetch nearby places */
 const fetchNearbyPlaces = async (lat, lng) => {
   const query = `
     [out:json];
@@ -48,7 +46,7 @@ const LocationMap = ({ className = "" }) => {
   const [places, setPlaces] = useState([]);
 
   useEffect(() => {
-    const watchId = navigator.geolocation.watchPosition(
+    navigator.geolocation.getCurrentPosition(
       async (pos) => {
         const lat = pos.coords.latitude;
         const lng = pos.coords.longitude;
@@ -58,26 +56,23 @@ const LocationMap = ({ className = "" }) => {
         try {
           const nearby = await fetchNearbyPlaces(lat, lng);
           setPlaces(nearby);
-        } catch (err) {
-          console.log("Failed to fetch places:", err);
+        } catch (error) {
+          console.log(error);
         }
       },
-      (err) => console.log(err),
+      (err) => {
+        console.log(err);
+      },
       {
         enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 0,
       },
     );
-
-    return () => navigator.geolocation.clearWatch(watchId);
   }, []);
 
-  /* Loading state */
   if (!position) {
     return (
-      <div className="w-full h-75 sm:h-100 md:h-125 flex items-center justify-center">
-        <p className="text-gray-400 animate-pulse text-sm sm:text-base">
+      <div className="w-full h-[280px] sm:h-[350px] md:h-[450px] lg:h-[520px] xl:h-[600px] flex items-center justify-center bg-gray-100 rounded-xl">
+        <p className="text-gray-500 text-sm md:text-base animate-pulse">
           Fetching your location...
         </p>
       </div>
@@ -85,42 +80,44 @@ const LocationMap = ({ className = "" }) => {
   }
 
   return (
-    <div
-      className={`w-full h-80 sm:h-105 md:h-130 lg:h-150 rounded-xl overflow-hidden ${className}`}
-    >
-      <MapContainer
-        center={position}
-        zoom={16}
-        scrollWheelZoom={false}
-        className="h-full w-full"
-      >
-        {/* 🌑 Dark map theme */}
-        <TileLayer
-          attribution="&copy; OpenStreetMap contributors &copy; CARTO"
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-        />
+    <div className={`w-full rounded-xl overflow-hidden shadow-lg ${className}`}>
+      <div className="h-[280px] p-5 mb-20  sm:h-[350px] md:h-[450px] lg:h-[520px] xl:h-[600px] 2xl:h-[700px]">
+        <MapContainer
+          center={position}
+          zoom={16}
+          className="w-full h-full"
+          scrollWheelZoom={false}
+          dragging={false}
+          zoomControl={true}
+          doubleClickZoom={false}
+          touchZoom={false}
+          keyboard={false}
+        >
+          <TileLayer
+            attribution="&copy; OpenStreetMap contributors &copy; CARTO"
+            url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          />
 
-        {/* 📍 User location */}
-        <Marker position={position}>
-          <Popup>You are here 📍</Popup>
-        </Marker>
-
-        {/* 📍 Nearby places */}
-        {places.map((place) => (
-          <Marker key={place.id} position={[place.lat, place.lng]}>
-            <Popup>
-              <b>{place.name}</b>
-              <br />
-              Type: {place.type}
-            </Popup>
+          <Marker position={position}>
+            <Popup>You are here 📍</Popup>
           </Marker>
-        ))}
-      </MapContainer>
 
-      {/* Info bar */}
-      <div className="p-2 sm:p-3 bg-black text-white text-xs sm:text-sm">
-        Showing {places.length} nearby places
+          {places.map((place) => (
+            <Marker key={place.id} position={[place.lat, place.lng]}>
+              <Popup>
+                <strong>{place.name}</strong>
+                <br />
+                {place.type}
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
       </div>
+
+      {/* <div className="bg-black text-white px-4 py-3 flex justify-between items-center text-xs sm:text-sm md:text-base">
+        <span>Your Current Location</span>
+        <span>{places.length} Nearby Places</span>
+      </div> */}
     </div>
   );
 };
